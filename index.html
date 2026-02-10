@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>For Nonopha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Layers -->
+  <div id="bg-animated-gradient" aria-hidden="true"></div>
+  <div id="bg-vignette" aria-hidden="true"></div>
+  <div id="bg-grain" aria-hidden="true"></div>
+  <div id="bg-bloom-1" class="bg-bloom" aria-hidden="true"></div>
+  <div id="bg-bloom-2" class="bg-bloom" aria-hidden="true"></div>
+  <div id="bg-bloom-3" class="bg-bloom" aria-hidden="true"></div>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="assets/music/background.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating Hearts Container -->
+  <div id="floating-hearts" aria-hidden="true"></div>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="section">
+    <div class="hero-content">
+      <div class="hero-glow"></div>
+      <h1 class="hero-title">Hey, Nonopha&hellip;</h1>
+      <p class="hero-subtitle">I made something just for you</p>
+      <div class="tap-prompt">
+        <span class="tap-icon">&#9825;</span>
+        <span class="tap-text">Tap to continue</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section id="story" class="section">
+    <div class="story-container">
+      <p class="story-line" data-delay="0">Nonopha Bacela, every moment with you feels like a dream I never want to wake up from.</p>
+      <p class="story-line" data-delay="200">You make the ordinary feel extraordinary.</p>
+      <p class="story-line" data-delay="400">Your smile is my favorite thing in this world.</p>
+      <p class="story-line" data-delay="600">And I fall for you a little more every single day.</p>
+      <p class="story-line" data-delay="800">So I wanted to ask you something&hellip;</p>
+    </div>
+  </section>
+
+  <!-- PHOTO MEMORY SECTION -->
+  <section id="memories" class="section section-auto-height">
+    <h2 class="section-heading">Our Memories, Nonopha</h2>
+    <div class="photo-grid">
+      <div class="photo-card" data-index="0">
+        <img src="assets/photos/photo1.jpg" alt="Our memory together" loading="lazy">
+      </div>
+      <div class="photo-card" data-index="1">
+        <img src="assets/photos/photo2.jpg" alt="Our memory together" loading="lazy">
+      </div>
+      <div class="photo-card" data-index="2">
+        <img src="assets/photos/photo3.jpg" alt="Our memory together" loading="lazy">
+      </div>
+      <div class="photo-card" data-index="3">
+        <img src="assets/photos/photo4.jpg" alt="Our memory together" loading="lazy">
+      </div>
+      <div class="photo-card" data-index="4">
+        <img src="assets/photos/photo5.jpg" alt="Our memory together" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section id="video-section" class="section">
+    <h2 class="section-heading">A moment for us, say hi to CPT for me</h2>
+    <div class="video-wrapper">
+      <video id="love-video" muted playsinline preload="metadata" poster="">
+        <source src="assets/video/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay" id="video-overlay">
+        <div class="play-btn-circle">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg>
+        </div>
+        <p class="video-tap-text">Tap to play</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL QUESTION SECTION -->
+  <section id="question" class="section">
+    <div class="question-container">
+      <h2 class="question-title">Nonopha Bacela, will you be my Valentine?</h2>
+      <div class="button-group">
+        <button class="btn btn-yes" id="btn-yes">Yes <span>&#10084;&#65039;</span></button>
+        <button class="btn btn-no" id="btn-no">No</button>
+      </div>
+      <div class="final-message" id="final-message">
+        <p class="final-text">I knew you&rsquo;d say yes, Nonopha!</p>
+        <p class="final-subtext">You just made me the happiest person alive.</p>
+        <p class="final-heart">&#10084;&#65039;</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Lightbox Overlay -->
+  <div id="photo-lightbox" class="photo-lightbox" aria-hidden="true">
+    <img id="lightbox-img" src="" alt="Memory">
+  </div>
+
+  <!-- Celebration Canvas -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
